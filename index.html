@@ -8,109 +8,97 @@
 
 <body>
 
-<header>
-  <h1>MentalBlackboard</h1>
-  <h2>Evaluating Spatial Visualization via Mathematical Transformations</h2>
-  <p>
-    A large-scale, open-ended benchmark for evaluating spatial visualization
-    in Vision-Language Models through paper folding and hole punching tasks.
+<div class="container">
+
+  <!-- TITLE -->
+  <h1 class="title">MentalBlackboard</h1>
+  <p class="subtitle">
+    Evaluating Spatial Visualization via Mathematical Transformations
   </p>
 
-  <div class="links">
-    <a href="#">📄 Paper</a>
-    <a href="https://github.com/mentalblackboard/MentalBlackboard">💻 Code</a>
-    <a href="#">📦 Dataset</a>
+  <!-- BUTTONS -->
+  <div class="buttons">
+    <a href="#" class="btn">📄 Paper</a>
+    <a href="https://github.com/mentalblackboard/MentalBlackboard" class="btn">💻 Code</a>
+    <a href="#" class="btn">📦 Dataset</a>
   </div>
-</header>
 
-<hr>
+  <!-- ABSTRACT -->
+  <section>
+    <h2>Abstract</h2>
+    <p class="abstract">
+      MentalBlackboard is a large-scale, open-ended benchmark designed to evaluate
+      spatial visualization abilities in Vision-Language Models.
+      The benchmark extends paper folding and hole punching tests with symmetry
+      and rotation transformations in a physically grounded 3D environment.
+      It introduces prediction, planning, and generalization tasks across
+      video, image, and text modalities.
+    </p>
+  </section>
 
-<section>
-  <h2>Abstract</h2>
-  <p>
-    MentalBlackboard is an open-ended spatial visualization benchmark designed
-    to evaluate whether modern Vision-Language Models can mentally imagine,
-    transform, and manipulate spatial structures. The benchmark builds on
-    Paper Folding and Hole Punching Tests with prediction and planning tasks,
-    incorporating symmetry and rotation transformations in a 3D environment.
-  </p>
-</section>
+  <!-- TEASER VIDEO -->
+  <section class="media-section">
+    <video autoplay muted loop playsinline>
+      <source src="assets/videos/teaser.mp4" type="video/mp4">
+    </video>
+    <p class="caption">
+      Overview of MentalBlackboard tasks and folding–unfolding process.
+    </p>
+  </section>
 
-<hr>
+  <!-- TASKS -->
+  <section>
+    <h2>Tasks</h2>
 
-<section>
-  <h2>Tasks</h2>
+    <div class="media-grid">
+      <div>
+        <video controls>
+          <source src="assets/videos/prediction_example.mp4" type="video/mp4">
+        </video>
+        <p class="caption"><b>Prediction:</b> Predict final hole configuration after unfolding.</p>
+      </div>
 
-  <h3>Prediction</h3>
-  <p>
-    Models are given a sequence of folding actions and initial hole properties,
-    and must predict the final hole configuration after unfolding.
-    The task is available in video, 2D image, and text formats.
-  </p>
+      <div>
+        <video controls>
+          <source src="assets/videos/planning_example.mp4" type="video/mp4">
+        </video>
+        <p class="caption"><b>Planning:</b> Infer folding sequence from final hole pattern.</p>
+      </div>
 
-  <video controls width="600">
-    <source src="assets/videos/prediction_example.mp4" type="video/mp4">
-  </video>
+      <div>
+        <video controls>
+          <source src="assets/videos/generalization_example.mp4" type="video/mp4">
+        </video>
+        <p class="caption"><b>Generalization:</b> Transfer spatial relations via visual analogy.</p>
+      </div>
+    </div>
+  </section>
 
-  <h3>Planning</h3>
-  <p>
-    Models are given the final unfolded paper and must infer the folding
-    sequence and initial hole attributes that produce the observed result.
-  </p>
+  <!-- PIPELINE -->
+  <section>
+    <h2>Dataset Generation</h2>
+    <img src="assets/figures/pipeline.png" class="figure">
+    <p class="caption">
+      Automated VPython-based pipeline for folding, rotation, punching, and unfolding.
+    </p>
+  </section>
 
-  <video controls width="600">
-    <source src="assets/videos/planning_example.mp4" type="video/mp4">
-  </video>
+  <!-- RESULTS -->
+  <section>
+    <h2>Key Findings</h2>
+    <ul>
+      <li>State-of-the-art VLMs struggle with multi-stage symmetry transformations.</li>
+      <li>Best models achieve ≤ 25% accuracy on prediction tasks.</li>
+      <li>Planning tasks reveal severe limitations in reverse spatial reasoning.</li>
+    </ul>
+  </section>
 
-  <h3>Generalization</h3>
-  <p>
-    Models solve visual analogical reasoning tasks by transferring spatial
-    properties between two paper-folding scenarios without explicit unfolding.
-  </p>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 MentalBlackboard Project</p>
+  </footer>
 
-  <video controls width="600">
-    <source src="assets/videos/generalization_example.mp4" type="video/mp4">
-  </video>
-</section>
-
-<hr>
-
-<section>
-  <h2>Dataset Generation Pipeline</h2>
-  <p>
-    MentalBlackboard is generated using a VPython-based 3D simulation that
-    supports multiple fold types, rotations, physical constraints, and
-    automated animation rendering.
-  </p>
-
-  <img src="assets/figures/pipeline.png" width="700">
-</section>
-
-<hr>
-
-<section>
-  <h2>Results Snapshot</h2>
-  <p>
-    Experiments show that state-of-the-art VLMs struggle with multi-stage
-    symmetry transformations, hole localization, and directional reasoning.
-    Even the best-performing model achieves only 25% accuracy in text-based
-    prediction and 10% accuracy in planning tasks.
-  </p>
-</section>
-
-<hr>
-
-<!--
-<section>
-  <h2>Citation</h2>
-  <pre>
-  </pre>
-</section>
--->
-
-<footer>
-  <p>© 2026 MentalBlackboard Project</p>
-</footer>
+</div>
 
 </body>
 </html>
