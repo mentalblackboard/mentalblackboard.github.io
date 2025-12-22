@@ -168,29 +168,62 @@ footer {
   font-size: 14px;
 }
 
-.teaser-section {
+.teaser-compact {
   margin-top: 60px;
   text-align: center;
 }
 
-.teaser-task {
-  margin-top: 40px;
+/* Toggle buttons */
+.toggle-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 12px;
 }
 
-.teaser-task h3 {
-  font-size: 22px;
-  margin-bottom: 16px;
+.toggle-row input {
+  display: none;
 }
 
-.teaser-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
+.toggle-row label {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
 }
 
-.teaser-grid video {
+.toggle-row input:checked + label {
+  background: #2f2f2f;
+  color: white;
+  border-color: #2f2f2f;
+}
+
+/* Video container */
+.video-switch {
+  position: relative;
+  max-width: 720px;
+  margin: 20px auto;
+}
+
+.video-switch video {
   width: 100%;
   border-radius: 10px;
-  border: 1px solid #ddd;
+  display: none;
 }
 
+/* Logic */
+#task-pred:checked ~ .video-switch .pred.problem,
+#task-pred:checked ~ .video-switch .pred.solution,
+#task-back:checked ~ .video-switch .back.problem,
+#task-back:checked ~ .video-switch .back.solution {
+  display: none;
+}
+
+#task-pred:checked ~ #mode-problem:checked ~ .video-switch .pred.problem,
+#task-pred:checked ~ #mode-solution:checked ~ .video-switch .pred.solution,
+#task-back:checked ~ #mode-problem:checked ~ .video-switch .back.problem,
+#task-back:checked ~ #mode-solution:checked ~ .video-switch .back.solution {
+  display: block;
+}
