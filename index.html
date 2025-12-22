@@ -36,32 +36,65 @@
   </section>
 
   <!-- TASKS -->
-  <section>
-    <h2>Tasks</h2>
+<section>
+  <h2>Tasks</h2>
 
-    <div class="media-grid">
-      <div>
-        <video controls>
-          <source src="assets/videos/prediction_example.mp4" type="video/mp4">
-        </video>
-        <p class="caption"><b>Prediction:</b> Predict final hole configuration after unfolding.</p>
-      </div>
+  <!-- Prediction -->
+  <h3>Prediction</h3>
+  <p>
+    Predict the final hole configuration after unfolding,
+    given the folding sequence and initial hole properties.
+  </p>
 
-      <div>
-        <video controls>
-          <source src="assets/videos/planning_example.mp4" type="video/mp4">
-        </video>
-        <p class="caption"><b>Planning:</b> Infer folding sequence from final hole pattern.</p>
-      </div>
+  <div class="media-grid">
+    <video controls>
+      <source src="assets/videos/prediction_example_1.mp4" type="video/mp4">
+    </video>
 
-      <div>
-        <video controls>
-          <source src="assets/videos/generalization_example.mp4" type="video/mp4">
-        </video>
-        <p class="caption"><b>Generalization:</b> Transfer spatial relations via visual analogy.</p>
-      </div>
-    </div>
-  </section>
+    <video controls>
+      <source src="assets/videos/prediction_example_2.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- Backward Prediction -->
+  <h3>Backward Prediction</h3>
+  <p>
+    Predict final hole configurations when folding actions
+    occur away from the camera, introducing limited visual information.
+  </p>
+
+  <div class="media-grid">
+    <video controls>
+      <source src="assets/videos/backward_prediction_1.mp4" type="video/mp4">
+    </video>
+
+    <video controls>
+      <source src="assets/videos/backward_prediction_2.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- Planning -->
+  <h3>Planning</h3>
+  <p>
+    Infer the folding sequence and initial hole attributes
+    from the final unfolded paper configuration.
+  </p>
+
+  <!-- Planning image -->
+  <img src="assets/figures/planning_example.png" class="figure">
+
+  <!-- Planning videos -->
+  <div class="media-grid">
+    <video controls>
+      <source src="assets/videos/planning_example_1.mp4" type="video/mp4">
+    </video>
+
+    <video controls>
+      <source src="assets/videos/planning_example_2.mp4" type="video/mp4">
+    </video>
+  </div>
+
+</section>
 
     <!-- ABSTRACT -->
   <section>
