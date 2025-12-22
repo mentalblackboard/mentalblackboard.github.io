@@ -208,6 +208,47 @@
     </p>
   </section>
 
+   <section>
+     
+    <h2>Do VLMs Transfer Spatial Information?</h2>
+     <p>
+    This section evaluates spatial knowledge transfer using a generalization task with 240
+    2D image-based analogy questions across three folding configurations. Each task pairs
+    two scenarios with identical folds but different hole data, requiring models to infer
+    missing hole attributes by relating the two cases.
+  </p>
+  <p>
+    The task isolates four hole attributes—shape, size, location, and direction—changing
+    only one at a time. It measures spatial transfer rather than full spatial visualization or
+    symmetry reasoning.
+  </p>
+     <img src="assets/figures/gen_cropped (2)-1.jpg" class="figure">
+    <p class="caption">
+      An example of a generalization task employs a visual analogical reasoning framework, which requires
+      making an inference from the first scenario to identify the missing part in the second scenario.
+    </p>
+    <img src="assets/figures/generalization.jpg" class="figure">
+    <p class="caption">
+      Performance of the models on the generalization task: (a) exact match accuracy of baseline models; (b) the
+    accuracy of the models for each category.
+    </p>
+    <p>
+    Results show a large gap between proprietary and open-source models. Models perform
+    best on shape and size, while direction and location remain challenging. Overall, models
+    tend to underpredict holes. The identical folding patterns reduce the need for mental
+    unfolding, explaining higher performance than in prediction or planning tasks.
+    </p>
+   </section>
+
+
+   <section>
+    <h2>How Do Representations Influence Performance?</h2>
+   </section>
+
+   <section>
+    <h2>How Does Backward Folding Affect Performance?</h2>
+   </section>
+
   <!-- FOOTER -->
   <footer>
     <p>© 2026 MentalBlackboard Project</p>
