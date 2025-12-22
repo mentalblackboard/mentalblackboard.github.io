@@ -167,3 +167,30 @@ footer {
   color: #777;
   font-size: 14px;
 }
+
+.teaser-section {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.teaser-task {
+  margin-top: 40px;
+}
+
+.teaser-task h3 {
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.teaser-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.teaser-grid video {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
