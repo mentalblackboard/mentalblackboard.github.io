@@ -93,6 +93,18 @@ h2 {
   margin: 20px auto;
 }
 
+.image-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.image-grid-3 img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+
 .caption {
   font-size: 14px;
   color: #555;
