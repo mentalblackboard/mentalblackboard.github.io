@@ -222,7 +222,7 @@
     only one at a time. It measures spatial transfer rather than full spatial visualization or
     symmetry reasoning.
   </p>
-     <img src="assets/figures/gen_cropped (2)-1.jpg" class="figure">
+     <img src="assets/figures/gen_cropped (2)-1.png" class="figure">
     <p class="caption">
       An example of a generalization task employs a visual analogical reasoning framework, which requires
       making an inference from the first scenario to identify the missing part in the second scenario.
@@ -243,10 +243,35 @@
 
    <section>
     <h2>How Do Representations Influence Performance?</h2>
+    <p>
+    This section studies the impact of representation format by comparing text-based,
+    2D image-based, and video-based PFT prediction tasks after removing the direction
+    attribute. Identical problem instances are used across modalities for fair comparison.
+   </p>
+   <p>
+    Text-based representations generally yield higher accuracy than visual formats,
+    especially for Claude models, which show large drops from text to image/video tasks.
+    In contrast, GPT-4o exhibits nearly identical performance across all modalities, while
+    GPT-5.1 shows only minor variation. These findings indicate that model performance is 
+    strongly influenced by input representation, with some models relying more heavily on
+     textual cues than visual ones.
+  </p>
    </section>
 
    <section>
     <h2>How Does Backward Folding Affect Performance?</h2>
+    <p>
+    A backward folding prediction task is introduced using 180 video questions in which
+    folding actions are reversed (away from the camera) while all other visual parameters
+    remain unchanged. The final paper appearance matches that of forward-fold tasks.
+    </p>
+    <p>
+    In the backward folding task, reversing the folding direction while keeping the final paper appearance unchanged
+    reveals clear model differences: o3 maintains performance comparable to forward folding, whereas the Claude
+    models show reduced exact-match accuracy and generate more extra holes. These results indicate that some models,
+    particularly the Claude variants, rely on view-dependent representations and struggle with spatial reasoning when
+    the perspective of folding actions is reversed.
+   </p>
    </section>
 
   <!-- FOOTER -->
