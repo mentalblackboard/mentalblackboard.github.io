@@ -25,6 +25,50 @@ body {
   margin-bottom: 30px;
 }
 
+.button-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 30px 0 40px;
+}
+
+.button-row-dark {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 24px 0 36px;
+}
+
+.pill-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 18px;
+  border-radius: 999px;
+
+  background-color: #2f2f2f;
+  color: #ffffff;
+
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.pill-dark:hover {
+  background-color: #444;
+  transform: translateY(-1px);
+}
+
+.pill-dark .icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
 .buttons {
   text-align: center;
   margin-bottom: 40px;
