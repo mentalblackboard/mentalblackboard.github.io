@@ -83,16 +83,6 @@
    </div>
   </div>
 
-  <!-- Planning -->
-  <h3>Planning</h3>
-  <p>
-    Infer the folding sequence and initial hole attributes
-    from the final unfolded paper configuration.
-  </p>
-
-  <!-- Planning image -->
-  <img src="assets/figures/planning_example.png" class="figure">
-
 
   <!-- ABSTRACT -->
   <section>
@@ -150,6 +140,29 @@
   <p class="caption">
        Examples of a prediction task and a planning task.
     </p>
+</section>
+
+  <!-- Evaluation Setup (Summary) -->
+<section id="evaluation-setup">
+  <h2>Evaluation Setup</h2>
+
+  <p>
+    We evaluate state-of-the-art Vision-Language Models in a
+    zero-shot setting across video-, image-, and text-based
+    prediction tasks, and 2D image-based planning tasks. Performance is measured
+    using Exact Match and a custom Partial Accuracy metric designed for open-ended
+    spatial predictions.
+  </p>
+
+  <p>
+    Partial Accuracy accounts for both correct hole matches and over-prediction,
+    and is defined as
+    <em>M / (G + max(0, P − G))</em>, where <em>G</em> is the number of
+    ground-truth holes, <em>P</em> is the number of predicted holes, and
+    <em>M</em> is the number of correctly matched holes. Field-wise accuracy is
+    additionally reported for individual hole attributes to enable fine-grained
+    analysis.
+  </p>
 </section>
   
   <!-- RESULTS -->
