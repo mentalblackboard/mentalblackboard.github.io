@@ -110,10 +110,6 @@
   <!-- PIPELINE -->
   <section>
     <h2>Dataset Generation</h2>
-    <img src="assets/figures/pipeline-1.png" class="figure">
-    <p class="caption">
-      Automated VPython-based pipeline for folding, rotation, punching, and unfolding.
-    </p>
     <p>
     MentalBlackboard is built with an automated, physically
     grounded pipeline based on a 3D paper-folding and hole-punching simulation
@@ -122,6 +118,10 @@
     the paper is discretized into triangular regions to support diagonal and
     multi-stage folds.
   </p>
+     <img src="assets/figures/pipeline-1.png" class="figure">
+    <p class="caption">
+      Automated VPython-based pipeline for folding, rotation, punching, and unfolding.
+    </p>
   </section>
 
   <!-- DATASET -->
@@ -147,20 +147,47 @@
     and sequential mental transformations.
   </p>
 <img src="assets/figures/last_tasks_cropped (2)-1.png" class="figure">
+  <p class="caption">
+       Examples of a prediction task and a planning task.
+    </p>
 </section>
   
   <!-- RESULTS -->
   <section>
-    <h2>Key Findings</h2>
+    <h2>Main Results</h2>
+    <ul>
+    <li>
+      State-of-the-art Vision-Language Models (VLMs) struggle with
+      multi-stage symmetry transformations, particularly when
+      reasoning over folded and unfolded paper structures.
+    </li>
+    <li>
+      The best-performing models achieve at most
+      25% exact match accuracy on prediction tasks, with
+      substantially lower performance in image- and video-based settings.
+    </li>
+    <li>
+      Planning tasks expose severe limitations in
+      reverse spatial reasoning, with no model exceeding
+      10% accuracy when inferring folding sequences from final
+      hole patterns.
+    </li>
+    <li>
+      Models are consistently more accurate at predicting
+      <em>shape</em> and <em>size</em> than <em>location</em> and
+      <em>direction</em>, indicating difficulties in spatial localization and
+      physical orientation reasoning.
+    </li>
+    <li>
+      Tasks involving rotation significantly degrade
+      performance, suggesting limited understanding of the
+      physical changes induced by reorientation.
+    </li>
+  </ul>
     <img src="assets/figures/table.jpg" class="figure">
     <p class="caption">
-      Automated VPython-based pipeline for folding, rotation, punching, and unfolding.
+       Model performances across video-based, 2D image-based, and text-based prediction tasks.
     </p>
-    <ul>
-      <li>State-of-the-art VLMs struggle with multi-stage symmetry transformations.</li>
-      <li>Best models achieve ≤ 25% accuracy on prediction tasks.</li>
-      <li>Planning tasks reveal severe limitations in reverse spatial reasoning.</li>
-    </ul>
   </section>
 
   <!-- FOOTER -->
