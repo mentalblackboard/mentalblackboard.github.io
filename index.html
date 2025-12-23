@@ -152,14 +152,10 @@
     zero-shot setting across video-, image-, and text-based
     prediction tasks, and 2D image-based planning tasks. Performance is measured
     using Exact Match and a custom Partial Accuracy metric designed for open-ended
-    spatial predictions.
+    spatial predictions. Partial Accuracy accounts for both correct hole matches and 
+    over-prediction, and is defined as
   </p>
-
-  <p>
-    Partial Accuracy accounts for both correct hole matches and over-prediction,
-    and is defined as
-  </p>
-  <p>
+  <p style="text-align:center;">
     \( \text{PartialAccuracy} = \frac{M}{G + \max(0, P - G)} \)
   </p>
     <p> where <em>G</em> is the number of
