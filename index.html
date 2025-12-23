@@ -247,8 +247,6 @@
     This section studies the impact of representation format by comparing text-based,
     2D image-based, and video-based PFT prediction tasks after removing the direction
     attribute. Identical problem instances are used across modalities for fair comparison.
-   </p>
-   <p>
     Text-based representations generally yield higher accuracy than visual formats,
     especially for Claude models, which show large drops from text to image/video tasks.
     In contrast, GPT-4o exhibits nearly identical performance across all modalities, while
@@ -263,10 +261,8 @@
     <p>
     A backward folding prediction task is introduced using 180 video questions in which
     folding actions are reversed (away from the camera) while all other visual parameters
-    remain unchanged. The final paper appearance matches that of forward-fold tasks.
-    </p>
-    <p>
-    In the backward folding task, reversing the folding direction while keeping the final paper appearance unchanged
+    remain unchanged. The final paper appearance matches that of forward-fold tasks. In the 
+    backward folding task, reversing the folding direction while keeping the final paper appearance unchanged
     reveals clear model differences: o3 maintains performance comparable to forward folding, whereas the Claude
     models show reduced exact-match accuracy and generate more extra holes. These results indicate that some models,
     particularly the Claude variants, rely on view-dependent representations and struggle with spatial reasoning when
