@@ -157,7 +157,11 @@
   <p>
     Partial Accuracy accounts for both correct hole matches and over-prediction,
     and is defined as
-    <em>M / (G + max(0, P − G))</em>, where <em>G</em> is the number of
+  </p>
+  <p>
+    \( \text{PartialAccuracy} = \frac{M}{G + \max(0, P - G)} \)
+  </p>
+    <p> where <em>G</em> is the number of
     ground-truth holes, <em>P</em> is the number of predicted holes, and
     <em>M</em> is the number of correctly matched holes. Field-wise accuracy is
     additionally reported for individual hole attributes to enable fine-grained
